@@ -1,4 +1,4 @@
-// Vish Tax Calculator (2025) - Educational estimator (not tax advice)
+// USA Tax Calculator (2025) - Educational estimator (not tax advice)
 
 // Currency formatter
 const fmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
