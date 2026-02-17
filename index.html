@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vish Federal Tax Estimation Calculator (2025)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="wrap">
+    <h1>Vish Federal Tax Estimation Calculator</h1>
+    <p class="sub">2025 Federal income tax estimator (education only)</p>
+  </header>
+
+  <main class="wrap grid">
+    <section class="card">
+      <h2>Inputs</h2>
+
+      <label class="field">
+        <span>Filing status</span>
+        <select id="status">
+          <option value="single">Single</option>
+          <option value="mfj">Married Filing Jointly</option>
+          <option value="hoh">Head of Household</option>
+          <option value="mfs">Married Filing Separately</option>
+        </select>
+      </label>
+
+      <div class="row">
+        <label class="field">
+          <span>Gross salary</span>
+          <input id="gross" type="number" inputmode="decimal" min="0" step="0.01" placeholder="000000" />
+          <small>Before 401(k), HSA, insurance deductions.</small>
+        </label>
+
+        <label class="field">
+          <span>Federal tax withheld (W-2 Box 2)</span>
+          <input id="withheld" type="number" inputmode="decimal" min="0" step="0.01" placeholder="0000.00" />
+        </label>
+      </div>
+
+      <div class="row">
+        <label class="field">
+          <span>401(k) contribution (pre-tax)</span>
+          <input id="k401" type="number" inputmode="decimal" min="0" step="0.01" placeholder="0000" />
+          <small>Reduces federal taxable wages (Box 1). Not Social Security wages.</small>
+        </label>
+
+        <label class="field">
+          <span>Other pre-tax deductions</span>
+          <input id="otherDed" type="number" inputmode="decimal" min="0" step="0.01" placeholder="0000" />
+          <small>HSA, health insurance, FSA, etc.</small>
+        </label>
+      </div>
+
+      <div class="row">
+        <label class="field">
+          <span>Short-term capital gain (STCG)</span>
+          <input id="stcg" type="number" inputmode="decimal" step="0.01" placeholder="0" />
+          <small>Held ≤ 1 year → taxed like ordinary income.</small>
+        </label>
+
+        <label class="field">
+          <span>Long-term capital gain (LTCG)</span>
+          <input id="ltcg" type="number" inputmode="decimal" step="0.01" placeholder="0" />
+          <small>Held &gt; 1 year → taxed at LTCG rates.</small>
+        </label>
+      </div>
+
+      <label class="field">
+        <span>Standard deduction (auto)</span>
+        <input id="deduction" type="number" inputmode="decimal" step="0.01" disabled />
+        <small>Auto-filled based on filing status (2025).</small>
+      </label>
+
+      <button id="calcBtn" class="btn">Calculate</button>
+
+      <p class="note">
+        This estimates <b>federal</b> income tax only. Doesn’t include state tax, credits, AMT, NIIT, etc.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Results</h2>
+
+      <div class="kpis">
+        <div class="kpi">
+          <div class="kpiLabel">Adjusted W-2 (Gross − 401k − Other)</div>
+          <div class="kpiValue" id="adjustedW2">$0</div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpiLabel">Total income (Adjusted W-2 + gains)</div>
+          <div class="kpiValue" id="totalIncome">$0</div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpiLabel">Taxable income (after standard deduction)</div>
+          <div class="kpiValue" id="taxableIncome">$0</div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpiLabel">Estimated federal tax</div>
+          <div class="kpiValue" id="totalTax">$0</div>
+        </div>
+
+        <div class="kpi kpiWide">
+          <div class="kpiLabel">Refund / Amount due</div>
+          <div class="kpiValue" id="refund">$0</div>
+          <div class="kpiHint" id="refundHint"></div>
+        </div>
+      </div>
+
+      <div class="warn" id="warnBox" style="display:none;"></div>
+
+      <h3>Ordinary income bracket breakdown</h3>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>Bracket</th>
+            <th>Taxed amount</th>
+            <th>Rate</th>
+            <th>Tax</th>
+          </tr>
+        </thead>
+        <tbody id="bracketRows"></tbody>
+      </table>
+
+      <h3>Long-term capital gains (LTCG)</h3>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>Rate</th>
+            <th>Taxed LTCG</th>
+            <th>Tax</th>
+          </tr>
+        </thead>
+        <tbody id="ltcgRows"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>
+      Educational estimator. Verify with official IRS guidance and your tax pro.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
