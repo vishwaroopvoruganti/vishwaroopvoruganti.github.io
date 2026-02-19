@@ -86,4 +86,50 @@ h3{margin:18px 0 10px; font-size:15px; color:var(--muted); font-weight:600}
 .tbl th{background:#0e1522; text-align:left; color:var(--muted)}
 .tbl tr:last-child td{border-bottom:none}
 
-.footer{color:var(--muted); font-size:12px; padding-top:0}
+/* .footer{color:var(--muted); font-size:12px; padding-top:0} */
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  color:var(--muted); font-size:12px; padding-top:0
+}
+
+
+/* .social{
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+} */
+
+.social{
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;   /* THIS centers it */
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+
+.social a{
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(169,183,199,0.35);
+  padding-bottom: 2px;
+}
+
+.social a:hover{
+  color: var(--text);
+  border-bottom-color: rgba(231,238,247,0.55);
+}
+
+.dot{
+  color: rgba(169,183,199,0.6);
+}
+
+.footer p{
+  text-align: center;
+}
+
