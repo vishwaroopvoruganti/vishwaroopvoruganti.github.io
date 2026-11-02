@@ -3,316 +3,143 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vishwaroop V — Senior Full Stack Java Engineer</title>
-<meta name="description" content="Senior Full Stack Java Engineer with 8+ years building banking and fintech systems. Spring Boot, microservices, Kafka, React, AWS, and applied AI.">
-<meta property="og:title" content="Vishwaroop V — Senior Full Stack Java Engineer">
-<meta property="og:description" content="8+ years of Java, Spring Boot, microservices and React in regulated financial services. Building AI-powered products on the side.">
+<title>Vishwaroop V — Senior Full Stack Java Developer</title>
+<meta name="description" content="Senior Full Stack Java Developer with 8+ years in banking and fintech. Spring Boot, microservices, Kafka, React, AWS, and applied AI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#0e1013; --panel:#15181d; --line:#262a31; --text:#e7e9ec; --muted:#9aa1ab;
-    --accent:#f5a524; --accent-2:#5ac8b8;
-    --serif:'Fraunces', Georgia, serif; --sans:'Inter', system-ui, sans-serif; --mono:'JetBrains Mono', ui-monospace, monospace;
-  }
+  :root{--text:#1a1a1a;--muted:#6b6b6b;--line:#e8e8e8;--link:#1d4ed8;--bg:#ffffff;--soft:#f6f6f4}
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;font-size:16px}
-  a{color:inherit}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--text);background:var(--bg);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px}
+  a{color:var(--link);text-decoration:none}
+  a:hover{text-decoration:underline}
 
-  nav{position:sticky;top:0;z-index:10;background:rgba(14,16,19,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
-  .logo{font-family:var(--mono);font-size:14px;letter-spacing:.02em}
-  .logo b{color:var(--accent);font-weight:500}
-  nav ul{display:flex;gap:28px;list-style:none;font-size:14px}
-  nav ul a{text-decoration:none;color:var(--muted)}
-  nav ul a:hover{color:var(--text)}
+  header{padding:80px 0 48px}
+  h1{font-size:32px;font-weight:600;letter-spacing:-.01em}
+  .role{color:var(--muted);font-size:17px;margin-top:4px}
+  .intro{margin-top:24px;font-size:17px}
+  .links{display:flex;gap:20px;flex-wrap:wrap;margin-top:24px;font-size:15px}
 
-  header{padding:110px 0 90px;border-bottom:1px solid var(--line)}
-  .eyebrow{font-family:var(--mono);font-size:13px;color:var(--accent-2);margin-bottom:22px}
-  h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6.4vw,72px);line-height:1.05;letter-spacing:-.02em;max-width:880px}
-  h1 em{font-style:italic;color:var(--accent)}
-  .lede{color:var(--muted);font-size:19px;max-width:640px;margin-top:28px}
-  .cta{display:flex;gap:14px;margin-top:40px;flex-wrap:wrap}
-  .btn{font-size:14px;font-weight:500;text-decoration:none;padding:12px 20px;border-radius:6px;border:1px solid var(--line)}
-  .btn.primary{background:var(--accent);color:#111;border-color:var(--accent)}
-  .btn:hover{border-color:var(--muted)}
-  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:70px;border-radius:8px;overflow:hidden}
-  .stat{background:var(--bg);padding:22px 24px}
-  .stat .n{font-family:var(--serif);font-size:34px}
-  .stat .l{color:var(--muted);font-size:13px}
+  section{padding:40px 0;border-top:1px solid var(--line)}
+  h2{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:24px}
 
-  section{padding:90px 0;border-bottom:1px solid var(--line)}
-  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:44px}
-  .sec-num{font-family:var(--mono);font-size:13px;color:var(--accent)}
-  h2{font-family:var(--serif);font-weight:400;font-size:36px;letter-spacing:-.01em}
+  .item{margin-bottom:32px}
+  .item:last-child{margin-bottom:0}
+  .item-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+  .item h3{font-size:17px;font-weight:600}
+  .item .meta{font-size:14px;color:var(--muted)}
+  .item p{margin-top:6px;color:#3a3a3a}
+  .item ul{margin-top:8px;padding-left:18px;color:#3a3a3a}
+  .item li{margin-bottom:4px}
+  .tags{margin-top:8px;font-size:13px;color:var(--muted)}
+  .item .plinks{margin-top:6px;font-size:14px;display:flex;gap:16px}
+  .badge{display:inline-block;font-size:12px;font-weight:500;padding:1px 8px;border-radius:10px;background:var(--soft);color:var(--muted);margin-left:8px;vertical-align:2px}
 
-  .about{display:grid;grid-template-columns:1.4fr 1fr;gap:56px}
-  .about p{color:var(--muted);margin-bottom:16px;font-size:17px}
-  .about p strong{color:var(--text);font-weight:500}
-  .focus{border:1px solid var(--line);border-radius:8px;padding:24px;background:var(--panel)}
-  .focus h3{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
-  .focus li{list-style:none;padding:9px 0;border-top:1px solid var(--line);font-size:15px}
-  .focus li:first-of-type{border-top:0}
+  .skills{display:grid;grid-template-columns:140px 1fr;row-gap:10px;column-gap:16px;font-size:15px}
+  .skills dt{color:var(--muted)}
 
-  .project{display:grid;grid-template-columns:220px 1fr;gap:40px;padding:36px 0;border-top:1px solid var(--line)}
-  .project:first-of-type{border-top:0;padding-top:0}
-  .p-meta{font-family:var(--mono);font-size:12px;color:var(--muted)}
-  .p-meta .tag{display:inline-block;color:var(--accent-2);margin-bottom:8px}
-  .p-meta .tag.ai{color:var(--accent)}
-  .project h3{font-family:var(--serif);font-weight:600;font-size:24px;margin-bottom:10px}
-  .project p{color:var(--muted);margin-bottom:14px}
-  .chips{display:flex;flex-wrap:wrap;gap:6px}
-  .chip{font-family:var(--mono);font-size:12px;padding:4px 9px;border:1px solid var(--line);border-radius:4px;color:var(--muted)}
-  .plinks{margin-top:14px;font-size:14px}
-  .plinks a{color:var(--accent);text-decoration:none;margin-right:18px}
-  .plinks a:hover{text-decoration:underline}
+  footer{padding:40px 0 60px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer a{color:var(--muted)}
 
-  .ai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .ai-card{border:1px solid var(--line);border-radius:8px;padding:22px;background:var(--panel)}
-  .ai-card .k{font-family:var(--mono);font-size:12px;color:var(--accent);margin-bottom:10px}
-  .ai-card h4{font-size:16px;font-weight:600;margin-bottom:8px}
-  .ai-card p{color:var(--muted);font-size:14px}
-
-  .role{display:grid;grid-template-columns:220px 1fr;gap:40px}
-  .role .when{font-family:var(--mono);font-size:13px;color:var(--muted)}
-  .role h3{font-size:20px;font-weight:600}
-  .role .org{color:var(--accent-2);font-size:15px;margin-bottom:14px}
-  .role ul{padding-left:18px;color:var(--muted)}
-  .role li{margin-bottom:8px}
-
-  .skills{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
-  .skills h4{font-family:var(--mono);font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
-  .skills li{list-style:none;font-size:15px;padding:4px 0}
-
-  .contact{text-align:left}
-  .contact h2{font-size:clamp(34px,5vw,54px);max-width:720px;line-height:1.1}
-  .contact p{color:var(--muted);margin:20px 0 34px;max-width:560px}
-  footer{padding:36px 0;color:var(--muted);font-size:13px;font-family:var(--mono)}
-  footer .wrap{display:flex;justify-content:space-between}
-
-  @media (max-width:820px){
-    nav ul{display:none}
-    .about,.project,.role{grid-template-columns:1fr;gap:16px}
-    .ai-grid{grid-template-columns:1fr}
-    .skills{grid-template-columns:repeat(2,1fr)}
-    .stats{grid-template-columns:1fr}
-    header{padding:70px 0 60px}
+  @media (max-width:560px){
+    header{padding:56px 0 36px}
+    h1{font-size:28px}
+    .skills{grid-template-columns:1fr;row-gap:2px}
+    .skills dd{margin-bottom:10px}
   }
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="wrap">
-    <div class="logo">vishwaroop<b>.v</b></div>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#ai">AI</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
 <header>
   <div class="wrap">
-    <div class="eyebrow">// Senior Full Stack Java Engineer · USA</div>
-    <h1>I build reliable systems for <em>regulated money</em>, and AI products on the side.</h1>
-    <p class="lede">8+ years of Java, Spring Boot, microservices and React across banking, fintech, healthcare and telecom. Today I work on banking platforms at a federally regulated financial institution.</p>
-    <div class="cta">
-      <a class="btn primary" href="#projects">See my work</a>
-      <a class="btn" href="https://github.com/vishwaroopvoruganti" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn" href="#contact">Get in touch</a>
-    </div>
-    <div class="stats">
-      <div class="stat"><div class="n">8+</div><div class="l">years shipping production Java</div></div>
-      <div class="stat"><div class="n">2</div><div class="l">live full-stack products I built solo</div></div>
-      <div class="stat"><div class="n">4</div><div class="l">industries: banking, fintech, healthcare, telecom</div></div>
+    <h1>Vishwaroop V</h1>
+    <div class="role">Senior Full Stack Java Developer · USA</div>
+    <p class="intro">I have 8+ years of experience building Java, Spring Boot and React applications across banking, fintech, healthcare and telecom. I currently work at Huntington. Outside work, I build my own products, many of them using AI.</p>
+    <div class="links">
+      <a href="mailto:vishwaroopvoruganti@gmail.com">Email</a>
+      <a href="https://github.com/vishwaroopvoruganti" target="_blank" rel="noopener">GitHub</a>
+      <a href="#projects">Projects</a>
     </div>
   </div>
 </header>
 
-<section id="about">
+<section>
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">01</span><h2>About</h2></div>
-    <div class="about">
-      <div>
-        <p>I'm <strong>Vishwaroop</strong>, but most people call me Vish. I'm a backend-leaning full stack engineer. My day job is building and maintaining Java services at <strong>Huntington</strong>, where correctness, auditability and uptime matter more than anything.</p>
-        <p>Outside work I build my own products end to end, from the database schema to the Cloudflare config. I like owning the whole stack because it shows me where the real trade-offs are.</p>
-        <p>Lately most of that work involves <strong>applied AI</strong>: LLM-powered document analysis, resume tailoring, and running models locally.</p>
-      </div>
-      <div class="focus">
-        <h3>What I bring</h3>
-        <ul>
-          <li>Spring Boot microservices at enterprise scale</li>
-          <li>Event-driven systems with Apache Kafka</li>
-          <li>React, Next.js and Angular frontends</li>
-          <li>AWS and self-managed Linux infrastructure</li>
-          <li>LLM integration with the Claude API</li>
-          <li>Building in regulated financial environments</li>
-        </ul>
-      </div>
+    <h2>Experience</h2>
+    <div class="item">
+      <div class="item-head"><h3>Senior Full Stack Java Developer · Huntington</h3><span class="meta">Columbus, OH · Current</span></div>
+      <ul>
+        <li>Build and maintain Java and Spring Boot services for banking platforms in a regulated environment.</li>
+        <li>Lead framework version upgrades across services using AI-assisted tooling.</li>
+        <li>Work across Kafka, React/Angular and AWS under strict compliance standards.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="item-head"><h3>Full Stack Java Developer</h3><span class="meta">Earlier roles</span></div>
+      <p>Java and Spring microservices and web frontends for fintech, healthcare and telecom clients.</p>
     </div>
   </div>
 </section>
 
 <section id="projects">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">02</span><h2>Selected projects</h2></div>
+    <h2>Projects</h2>
 
-    <div class="project">
-      <div class="p-meta"><span class="tag">● LIVE · FOUNDER</span><br>Real estate platform<br>Hyderabad / NRI market</div>
-      <div>
-        <h3>VSquare Properties</h3>
-        <p>A property platform for buyers, brokers and NRI investors in Hyderabad and Telangana, with a Telugu-language interface. I designed, built and run all of it: verified listings, phone OTP and Google sign-in, map search, an admin panel, and an SEO-first Next.js frontend.</p>
-        <p>Production setup includes JWT auth, Bucket4j rate limiting, Flyway migrations, Elasticsearch search, Cloudflare WAF and Tunnels, and CI/CD with GitHub Actions.</p>
-        <div class="chips">
-          <span class="chip">Spring Boot</span><span class="chip">Java 17</span><span class="chip">Next.js</span><span class="chip">MySQL 8</span><span class="chip">Elasticsearch</span><span class="chip">Firebase</span><span class="chip">Cloudflare</span><span class="chip">Hetzner</span>
-        </div>
-        <div class="plinks"><a href="https://vsquareproperties.in" target="_blank" rel="noopener">vsquareproperties.in ↗</a></div>
-      </div>
+    <div class="item">
+      <div class="item-head"><h3>VSquare Properties <span class="badge">Live</span></h3></div>
+      <p>A real estate platform for Hyderabad and NRI buyers, with a Telugu-language interface. I built and run it myself, end to end: listings, OTP and Google login, map search, an admin panel, and an SEO-focused frontend.</p>
+      <div class="tags">Spring Boot · Next.js · MySQL · Elasticsearch · Firebase · Cloudflare · GitHub Actions</div>
+      <div class="plinks"><a href="https://vsquareproperties.in" target="_blank" rel="noopener">vsquareproperties.in</a></div>
     </div>
 
-    <div class="project">
-      <div class="p-meta"><span class="tag ai">◆ AI · IN PROGRESS</span><br>Document intelligence<br>for VSquare</div>
-      <div>
-        <h3>AI Land Document Analyzer</h3>
-        <p>Telangana land records are messy, scanned and often in Telugu. I'm building a hybrid pipeline that uses Google Vision OCR for text extraction and Claude for reasoning, so it can flag gaps and produce a <strong>Document Health Score</strong> before a buyer commits.</p>
-        <div class="chips">
-          <span class="chip">Claude API</span><span class="chip">Google Vision OCR</span><span class="chip">Spring Boot</span><span class="chip">LLM pipelines</span>
-        </div>
-      </div>
+    <div class="item">
+      <div class="item-head"><h3>AI Land Document Analyzer <span class="badge">In progress</span></h3></div>
+      <p>Reads scanned Telangana land documents with Google Vision OCR. Claude then reviews the text and produces a Document Health Score before someone buys.</p>
+      <div class="tags">Claude API · Google Vision · Spring Boot</div>
     </div>
 
-    <div class="project">
-      <div class="p-meta"><span class="tag ai">◆ AI</span><br>Productivity tool<br>Personal use</div>
-      <div>
-        <h3>AI Job Application Tracker</h3>
-        <p>A full-stack app that tracks job applications and uses Claude to tailor resumes, draft cover letters and write follow-up emails for each role. API keys stay on the server, and applications are always submitted by hand.</p>
-        <div class="chips">
-          <span class="chip">Spring Boot 3.2</span><span class="chip">React 18</span><span class="chip">Vite</span><span class="chip">MySQL</span><span class="chip">JPA</span><span class="chip">Claude API</span>
-        </div>
-        <div class="plinks"><a href="https://github.com/vishwaroopvoruganti/job-tracker" target="_blank" rel="noopener">Source ↗</a></div>
-      </div>
+    <div class="item">
+      <div class="item-head"><h3>AI Job Application Tracker</h3></div>
+      <p>Tracks job applications and uses Claude to tailor resumes, write cover letters and draft follow-up emails for each role.</p>
+      <div class="tags">Spring Boot 3 · React · MySQL · Claude API</div>
     </div>
 
-    <div class="project">
-      <div class="p-meta"><span class="tag">● FINTECH</span><br>Web tool</div>
-      <div>
-        <h3>Federal Tax Estimator 2025</h3>
-        <p>A browser-based estimator for 2025 US federal income tax that works through brackets and deductions in plain JavaScript.</p>
-        <div class="chips"><span class="chip">JavaScript</span><span class="chip">HTML/CSS</span></div>
-        <div class="plinks"><a href="tax-estimator/">Try it live ↗</a><a href="https://github.com/vishwaroopvoruganti/vishwaroopvoruganti.github.io/tree/main/tax-estimator" target="_blank" rel="noopener">Source ↗</a></div>
-      </div>
+    <div class="item">
+      <div class="item-head"><h3>Federal Tax Estimator 2025</h3></div>
+      <p>A browser tool that estimates 2025 US federal income tax, including brackets, 401(k) deductions and capital gains.</p>
+      <div class="tags">JavaScript · HTML · CSS</div>
+      <div class="plinks"><a href="tax-estimator/">Try it</a><a href="https://github.com/vishwaroopvoruganti/vishwaroopvoruganti.github.io/tree/main/tax-estimator" target="_blank" rel="noopener">Code</a></div>
     </div>
 
-    <div class="project">
-      <div class="p-meta"><span class="tag">● FINTECH</span><br>Side project</div>
-      <div>
-        <h3>TRADEX Paper Trading Terminal</h3>
-        <p>A React trading dashboard for practicing trades with simulated money, with a terminal-style layout for watchlists, orders and positions.</p>
-        <div class="chips"><span class="chip">React</span><span class="chip">Dashboards</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="ai">
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">03</span><h2>AI tools &amp; models I work with</h2></div>
-    <div class="ai-grid">
-      <div class="ai-card">
-        <div class="k">LLM APIs</div>
-        <h4>Anthropic Claude</h4>
-        <p>Used in production code for document reasoning, resume tailoring and content generation, with all calls made from the server.</p>
-      </div>
-      <div class="ai-card">
-        <div class="k">Vision / OCR</div>
-        <h4>Google Cloud Vision</h4>
-        <p>Pulls text out of scanned land documents before Claude reasons over it.</p>
-      </div>
-      <div class="ai-card">
-        <div class="k">Local models</div>
-        <h4>Qwen2.5 7B · LM Studio</h4>
-        <p>Runs a model on my own hardware and connects it to VS Code through the Continue extension for private coding help.</p>
-      </div>
-      <div class="ai-card">
-        <div class="k">Agents &amp; MCP</div>
-        <h4>Model Context Protocol</h4>
-        <p>Wires MCP servers into my AI tools, including Gemini image generation, so agents can use outside capabilities.</p>
-      </div>
-      <div class="ai-card">
-        <div class="k">Image models</div>
-        <h4>Gemini (Nano Banana)</h4>
-        <p>Generates and edits images for product marketing through an MCP integration.</p>
-      </div>
-      <div class="ai-card">
-        <div class="k">At work</div>
-        <h4>AI-assisted upgrades</h4>
-        <p>Uses an upgrade agent to roll internal framework version upgrades across many Java services.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="experience">
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">04</span><h2>Experience</h2></div>
-    <div class="role">
-      <div class="when">Current</div>
-      <div>
-        <h3>Senior Full Stack Java Developer</h3>
-        <div class="org">Huntington · Columbus, OH</div>
-        <ul>
-          <li>Builds and maintains Java and Spring Boot services for banking platforms in a federally regulated environment.</li>
-          <li>Leads framework version upgrades across services, using AI-assisted tooling to move faster.</li>
-          <li>Works across the stack with Kafka, React/Angular and AWS, under strict model-risk and compliance standards.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="role" style="margin-top:44px">
-      <div class="when">Earlier</div>
-      <div>
-        <h3>Full Stack Java Developer</h3>
-        <div class="org">Fintech · Healthcare · Telecom</div>
-        <ul>
-          <li>Delivered Java and Spring microservices plus web frontends across fintech, healthcare and telecom clients.</li>
-        </ul>
-      </div>
+    <div class="item">
+      <div class="item-head"><h3>TRADEX</h3></div>
+      <p>A React paper trading dashboard for practicing trades with simulated money.</p>
+      <div class="tags">React</div>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">05</span><h2>Skills</h2></div>
-    <div class="skills">
-      <div><h4>Backend</h4><ul><li>Java 8–17</li><li>Spring Boot 3</li><li>Microservices</li><li>Apache Kafka</li><li>JPA / Hibernate</li><li>REST APIs</li></ul></div>
-      <div><h4>Frontend</h4><ul><li>React 18</li><li>Next.js</li><li>Angular</li><li>Vite</li><li>TypeScript / JS</li></ul></div>
-      <div><h4>Data &amp; Infra</h4><ul><li>MySQL 8</li><li>Elasticsearch</li><li>AWS</li><li>Linux / Hetzner</li><li>Cloudflare</li><li>GitHub Actions</li></ul></div>
-      <div><h4>AI</h4><ul><li>Claude API</li><li>Google Vision</li><li>Local LLMs</li><li>MCP</li><li>Prompt design</li></ul></div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="contact" style="border-bottom:0">
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">06</span></div>
-    <h2>Looking for my next senior Java full stack role.</h2>
-    <p>I'm open to remote-first teams building serious backend systems. If that sounds like your team, I'd like to hear from you.</p>
-    <div class="cta" style="margin-top:0">
-      <a class="btn primary" href="mailto:vishwaroopvoruganti@gmail.com">vishwaroopvoruganti@gmail.com</a>
-      <a class="btn" href="https://github.com/vishwaroopvoruganti" target="_blank" rel="noopener">GitHub ↗</a>
-    </div>
+    <h2>Skills</h2>
+    <dl class="skills">
+      <dt>Backend</dt><dd>Java 8–17, Spring Boot 3, Microservices, Kafka, JPA/Hibernate, REST</dd>
+      <dt>Frontend</dt><dd>React, Next.js, Angular, JavaScript, TypeScript</dd>
+      <dt>Data &amp; Cloud</dt><dd>MySQL, Elasticsearch, AWS, Linux, Cloudflare, GitHub Actions</dd>
+      <dt>AI</dt><dd>Claude API, Google Vision OCR, local LLMs (Qwen2.5 in LM Studio), MCP, Gemini image models</dd>
+    </dl>
   </div>
 </section>
 
 <footer>
-  <div class="wrap"><span>© 2026 Vishwaroop V</span><span><a href="https://www.instagram.com/invest_with_vish/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.youtube.com/@invest_with_vish" target="_blank" rel="noopener">YouTube</a> · @invest_with_vish</span></div>
+  <div class="wrap">
+    <span>© 2026 Vishwaroop V</span>
+    <span><a href="https://www.instagram.com/invest_with_vish/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.youtube.com/@invest_with_vish" target="_blank" rel="noopener">YouTube</a></span>
+  </div>
 </footer>
 
 </body>
