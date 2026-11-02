@@ -35,6 +35,9 @@
   .item li{margin-bottom:4px}
   .tags{margin-top:8px;font-size:13px;color:var(--muted)}
   .item .plinks{margin-top:6px;font-size:14px;display:flex;gap:16px}
+  .plain{list-style:none}
+  .plain li{margin-bottom:10px;color:#3a3a3a}
+  .plain strong{color:var(--text);font-weight:600}
   .badge{display:inline-block;font-size:12px;font-weight:500;padding:1px 8px;border-radius:10px;background:var(--soft);color:var(--muted);margin-left:8px;vertical-align:2px}
 
   .skills{display:grid;grid-template-columns:140px 1fr;row-gap:10px;column-gap:16px;font-size:15px}
@@ -61,8 +64,8 @@
     <p class="intro">I have 8+ years of experience building Java, Spring Boot and React applications across banking, fintech, healthcare and telecom. I currently work at Huntington. Outside work, I build my own products, many of them using AI.</p>
     <div class="links">
       <a href="mailto:vishwaroopvoruganti@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/vishwaroop-v-a164001b8/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://github.com/vishwaroopvoruganti" target="_blank" rel="noopener">GitHub</a>
-      <a href="#projects">Projects</a>
     </div>
   </div>
 </header>
@@ -73,9 +76,12 @@
     <div class="item">
       <div class="item-head"><h3>Senior Full Stack Java Developer · Huntington</h3><span class="meta">Columbus, OH · Current</span></div>
       <ul>
-        <li>Build and maintain Java and Spring Boot services for banking platforms in a regulated environment.</li>
-        <li>Lead framework version upgrades across services using AI-assisted tooling.</li>
-        <li>Work across Kafka, React/Angular and AWS under strict compliance standards.</li>
+        <li>Build and maintain Java and Spring Boot microservices for banking platforms at a federally regulated financial institution.</li>
+        <li>Design REST APIs and event-driven integrations using Apache Kafka.</li>
+        <li>Develop frontend features in Angular and React that connect to backend services.</li>
+        <li>Lead framework version upgrades across many services, using AI-assisted tooling to roll them out faster and more safely.</li>
+        <li>Deploy and run services on AWS with CI/CD pipelines.</li>
+        <li>Follow model risk management, audit and compliance standards required in banking.</li>
       </ul>
     </div>
     <div class="item">
@@ -85,41 +91,15 @@
   </div>
 </section>
 
-<section id="projects">
+<section>
   <div class="wrap">
-    <h2>Projects</h2>
-
-    <div class="item">
-      <div class="item-head"><h3>VSquare Properties <span class="badge">Live</span></h3></div>
-      <p>A real estate platform for Hyderabad and NRI buyers, with a Telugu-language interface. I built and run it myself, end to end: listings, OTP and Google login, map search, an admin panel, and an SEO-focused frontend.</p>
-      <div class="tags">Spring Boot · Next.js · MySQL · Elasticsearch · Firebase · Cloudflare · GitHub Actions</div>
-      <div class="plinks"><a href="https://vsquareproperties.in" target="_blank" rel="noopener">vsquareproperties.in</a></div>
-    </div>
-
-    <div class="item">
-      <div class="item-head"><h3>AI Land Document Analyzer <span class="badge">In progress</span></h3></div>
-      <p>Reads scanned Telangana land documents with Google Vision OCR. Claude then reviews the text and produces a Document Health Score before someone buys.</p>
-      <div class="tags">Claude API · Google Vision · Spring Boot</div>
-    </div>
-
-    <div class="item">
-      <div class="item-head"><h3>AI Job Application Tracker</h3></div>
-      <p>Tracks job applications and uses Claude to tailor resumes, write cover letters and draft follow-up emails for each role.</p>
-      <div class="tags">Spring Boot 3 · React · MySQL · Claude API</div>
-    </div>
-
-    <div class="item">
-      <div class="item-head"><h3>Federal Tax Estimator 2025</h3></div>
-      <p>A browser tool that estimates 2025 US federal income tax, including brackets, 401(k) deductions and capital gains.</p>
-      <div class="tags">JavaScript · HTML · CSS</div>
-      <div class="plinks"><a href="tax-estimator/">Try it</a><a href="https://github.com/vishwaroopvoruganti/vishwaroopvoruganti.github.io/tree/main/tax-estimator" target="_blank" rel="noopener">Code</a></div>
-    </div>
-
-    <div class="item">
-      <div class="item-head"><h3>TRADEX</h3></div>
-      <p>A React paper trading dashboard for practicing trades with simulated money.</p>
-      <div class="tags">React</div>
-    </div>
+    <h2>What I bring</h2>
+    <ul class="plain">
+      <li><strong>Enterprise Java:</strong> 8+ years with Java 8–17 and Spring Boot, from monoliths to microservices.</li>
+      <li><strong>Regulated systems:</strong> experience building software where correctness, security and auditability come first.</li>
+      <li><strong>Full stack ownership:</strong> comfortable across the database, APIs, frontend, cloud and deployment.</li>
+      <li><strong>Applied AI:</strong> I use LLMs in my own products and AI tools in my daily engineering work.</li>
+    </ul>
   </div>
 </section>
 
@@ -127,11 +107,29 @@
   <div class="wrap">
     <h2>Skills</h2>
     <dl class="skills">
-      <dt>Backend</dt><dd>Java 8–17, Spring Boot 3, Microservices, Kafka, JPA/Hibernate, REST</dd>
-      <dt>Frontend</dt><dd>React, Next.js, Angular, JavaScript, TypeScript</dd>
-      <dt>Data &amp; Cloud</dt><dd>MySQL, Elasticsearch, AWS, Linux, Cloudflare, GitHub Actions</dd>
-      <dt>AI</dt><dd>Claude API, Google Vision OCR, local LLMs (Qwen2.5 in LM Studio), MCP, Gemini image models</dd>
+      <dt>Languages</dt><dd>Java 8–17, JavaScript, TypeScript, SQL</dd>
+      <dt>Backend</dt><dd>Spring Boot 3, Microservices, Apache Kafka, JPA/Hibernate, REST APIs</dd>
+      <dt>Frontend</dt><dd>Angular, React, Next.js</dd>
+      <dt>Data &amp; Cloud</dt><dd>MySQL, Elasticsearch, AWS, Linux, Cloudflare</dd>
+      <dt>DevOps</dt><dd>GitHub Actions, CI/CD, Flyway, monitoring</dd>
+      <dt>AI</dt><dd>Claude API, Google Vision OCR, local LLMs, MCP</dd>
     </dl>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Personal projects</h2>
+    <div class="item">
+      <div class="item-head"><h3>Real Estate Listing Platform <span class="badge">Live</span></h3><span class="meta">Hyderabad, India</span></div>
+      <p>A property platform for home buyers, brokers and NRI investors, with a Telugu-language interface. I designed, built and run it on my own: verified listings, phone OTP and Google login, map search, an admin panel and an SEO-focused frontend. Security is handled with JWT auth, rate limiting and Cloudflare WAF.</p>
+      <div class="tags">Spring Boot · Java 17 · Next.js · MySQL · Elasticsearch · Firebase · Cloudflare · GitHub Actions</div>
+    </div>
+    <div class="item">
+      <div class="item-head"><h3>AI Land Document Analyzer <span class="badge">In progress</span></h3></div>
+      <p>An add-on for the platform. It reads scanned land documents with Google Vision OCR, then Claude reviews the text and gives a Document Health Score before someone buys.</p>
+      <div class="tags">Claude API · Google Vision · Spring Boot</div>
+    </div>
   </div>
 </section>
 
